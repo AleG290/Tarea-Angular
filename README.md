@@ -1,59 +1,72 @@
-# TareaAngular
+# Tarea 3
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.8.
+Este proyecto es una aplicación en Angular que consume datos de la API pública de Pokémon y los muestra en una lista.
 
-## Development server
+## **Tecnologías utilizadas**
 
-To start a local development server, run:
+- **Angular**: Framework de desarrollo frontend.
+- **RxJS**: Librería para manejar flujos asíncronos.
+- **HTTP Client**: Para hacer peticiones HTTP a la API de Pokémon.
 
-```bash
-ng serve
-```
+## **Características**
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- Muestra una lista de los primeros 10 Pokémon desde la [Pokémon API](https://pokeapi.co/).
+- El diseño está basado en un tema inspirado en Pokémon, con tarjetas interactivas que muestran el nombre de cada Pokémon.
+- El título incluye el logo de Pokémon.
 
-## Code scaffolding
+## **Requisitos**
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+- **Node.js** (versión 16 o superior)
+- **npm** (gestor de paquetes de Node.js)
 
-```bash
-ng generate component component-name
-```
+## **Instrucciones de ejecución**
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+1. **Clona el repositorio** en tu máquina local:
 
-```bash
-ng generate --help
-```
+    ```bash
+    git clone https://github.com/tu-usuario/tarea3.git
+    ```
 
-## Building
+2. **Accede a la carpeta del proyecto**:
 
-To build the project run:
+    ```bash
+    cd tarea3
+    ```
 
-```bash
-ng build
-```
+3. **Instala las dependencias** del proyecto:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+    ```bash
+    npm install
+    ```
 
-## Running unit tests
+4. **Ejecuta la aplicación**:
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+    ```bash
+    ng serve
+    ```
 
-```bash
-ng test
-```
+    Esto levantará un servidor en el puerto **4200** (por defecto). Puedes acceder a la aplicación abriendo tu navegador y visitando:
 
-## Running end-to-end tests
+    ```url
+    http://localhost:4200
+    ```
 
-For end-to-end (e2e) testing, run:
+## **Descripción del código**
 
-```bash
-ng e2e
-```
+- **app.component.ts**: Este archivo contiene la lógica para hacer la petición HTTP a la Pokémon API y mostrar los resultados en la vista.
+- **app.component.html**: Es el archivo donde se define el HTML que presenta la lista de Pokémon y el título con el logo.
+- **app.module.ts**: Este archivo es donde se declaran los módulos y servicios que Angular necesita para ejecutar la aplicación. Asegúrate de tener importados los módulos necesarios, como `HttpClientModule` para las peticiones HTTP.
+- **styles.css**: Estilos globales que se aplican a toda la aplicación.
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+## **Dependencias**
 
-## Additional Resources
+El proyecto utiliza las siguientes dependencias de Angular:
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+- `@angular/core`
+- `@angular/common`
+- `@angular/http`
+- `rxjs`
+
+## **Licencia**
+
+Este proyecto está bajo la licencia MIT. Si necesitas más información sobre la licencia, consulta el archivo LICENSE.

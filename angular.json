@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "tarea-angular": {
+    "tarea3": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/tarea-angular",
+            "outputPath": "dist/tarea3",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -21,10 +21,8 @@
             ],
             "tsConfig": "tsconfig.app.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -59,10 +57,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "tarea-angular:build:production"
+              "buildTarget": "tarea3:build:production"
             },
             "development": {
-              "buildTarget": "tarea-angular:build:development"
+              "buildTarget": "tarea3:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -79,10 +77,8 @@
             ],
             "tsConfig": "tsconfig.spec.json",
             "assets": [
-              {
-                "glob": "**/*",
-                "input": "public"
-              }
+              "src/favicon.ico",
+              "src/assets"
             ],
             "styles": [
               "src/styles.css"
@@ -94,6 +90,6 @@
     }
   },
   "cli": {
-    "analytics": "daac9b93-3879-43ab-a359-ebbe311057b9"
+    "analytics": "2168445d-61ce-42d9-872b-9d205cdf3399"
   }
 }
