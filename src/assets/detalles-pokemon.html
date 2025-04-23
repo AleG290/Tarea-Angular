@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Detalle de Pokémon</title>
+  <style>
+    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
+  </style>
+</head>
+<body>
+  <h1 id="nombre"></h1>
+  <img id="sprite" />
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const id = params.get('id');
+
+    fetch(`https://pokeapi.co/api/v2/pokemon/${id}`)
+      .then(res => res.json())
+      .then(data => {
+        document.getElementById('nombre').textContent = data.name.toUpperCase();
+        document.getElementById('sprite').src = data.sprites.front_default;
+      });
+  </script>
+</body>
+</html>

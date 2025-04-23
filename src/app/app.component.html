@@ -5,7 +5,9 @@
 
 <ul>
   <li *ngFor="let poke of pokemons">
-    <img [src]="poke.image" [alt]="poke.name" class="pokemon-img" />
-    {{ poke.name | titlecase }}
+    <a [href]="'/assets/detalles-pokemon.html?id=' + poke.id" target="_blank">
+      <img [src]="poke.image" [alt]="poke.name" class="pokemon-img" />
+      {{ poke.name | titlecase }}
+    </a>
   </li>
 </ul>
