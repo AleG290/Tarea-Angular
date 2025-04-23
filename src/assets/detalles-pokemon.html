@@ -3,13 +3,14 @@
 <head>
   <meta charset="UTF-8">
   <title>Detalle de Pokémon</title>
-  <style>
-    body { font-family: sans-serif; text-align: center; margin-top: 50px; }
-  </style>
+  <link rel="stylesheet" href="detallepokemon.css">
 </head>
 <body>
   <h1 id="nombre"></h1>
   <img id="sprite" />
+
+  <div class="container" id="infoContainer"></div>
+
   <script>
     const params = new URLSearchParams(window.location.search);
     const id = params.get('id');
@@ -19,7 +20,50 @@
       .then(data => {
         document.getElementById('nombre').textContent = data.name.toUpperCase();
         document.getElementById('sprite').src = data.sprites.front_default;
+
+        const container = document.getElementById('infoContainer');
+
+        // definicion de carta Habilidades
+        const cardHabilidades = document.createElement('div');
+        cardHabilidades.className = 'card';
+
+        const tituloHab = document.createElement('h3');
+        tituloHab.textContent = 'Habilidades';
+        cardHabilidades.appendChild(tituloHab);
+
+        data.abilities.forEach(item => {
+          const hab = document.createElement('p');
+          hab.textContent = `• ${item.ability?.name || 'Sin nombre'}`;
+          cardHabilidades.appendChild(hab);
+        });
+
+        container.appendChild(cardHabilidades);
+
+        // definicion de carta peso y altura
+        const cardPesoAltura = document.createElement('div');
+        cardPesoAltura.className = 'card';
+
+        const tituloPesoAltura = document.createElement('h3');
+        tituloPesoAltura.textContent = 'Peso y Altura';
+        cardPesoAltura.appendChild(tituloPesoAltura);
+
+        const peso = document.createElement('p');
+        peso.textContent = `Peso: ${data.weight}`;
+        const altura = document.createElement('p');
+        altura.textContent = `Altura: ${data.height}`;
+
+        cardPesoAltura.appendChild(peso);
+        cardPesoAltura.appendChild(altura);
+
+        container.appendChild(cardPesoAltura);
       });
+
+      
+
+      
+
+      
+      
   </script>
 </body>
 </html>
