@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
+import { PokedexComponent } from './pokedex/pokedex.component';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +11,7 @@ import { RouterModule } from '@angular/router';
   templateUrl: './app.component.html'
 })
 export class AppComponent {
+  title = 'nombre-del-proyecto';
   pokemons: any[] = [];
 
   constructor(private http: HttpClient) {}

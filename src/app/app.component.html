@@ -1,11 +1,11 @@
 <header class="app-header">
   <img src="assets/logo.png" alt="Logo Pokemon" class="logo" />
-  <h1></h1>
-</header>
 
+</header>
+<router-outlet></router-outlet>
 <ul>
   <li *ngFor="let poke of pokemons">
-    <a [href]="'/assets/detalles-pokemon.html?id=' + poke.id" target="_blank">
+    <a [routerLink]="['/pokedex', poke.id]">
       <img [src]="poke.image" [alt]="poke.name" class="pokemon-img" />
       {{ poke.name | titlecase }}
     </a>
