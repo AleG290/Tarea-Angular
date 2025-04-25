@@ -10,6 +10,10 @@ export const routes: Routes = [
   {
     path: 'pokedex/:id',
     loadComponent: () => import('./pokedex/pokedex.component').then(m => m.PokedexComponent)
+  },
+  {
+    path: 'detalle/:id',
+    loadComponent: () => import('./detalle/detalle.component').then(m => m.DetalleComponent)
   }
 ];
 

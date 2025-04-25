@@ -19,7 +19,6 @@ export class PokedexComponent {
   constructor(private http: HttpClient, private ruta: ActivatedRoute) {}
 
   ngOnInit() {
-    document.body.classList.add('pokedex-body');
     this.id = this.ruta.snapshot.paramMap.get('id');
     if (this.id) {
       this.obtenerDetallesPokemon(this.id);

@@ -5,7 +5,7 @@
   
   <ul>
     <li *ngFor="let poke of pokemons">
-      <a [routerLink]="['/pokedex', poke.id]">
+      <a [routerLink]="['/detalle', poke.id]">
         <img [src]="poke.image" [alt]="poke.name" class="pokemon-img" />
         {{ poke.name | titlecase }}
       </a>
