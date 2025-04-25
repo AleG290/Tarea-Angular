@@ -1,0 +1,27 @@
+.pokedex-body {
+    background-color: #757d43;
+    font-family: 'Press Start 2P', cursive;
+    
+    background-size: cover;
+    margin: 0;
+  }
+
+  .bloque-info {
+    background-color: #12100a(220, 220, 220, 0.9);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    margin: 1.5rem auto;
+    max-width: 800px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    text-align: center;
+  }
+  
+  .imagen{
+    width: 180px;
+    height: 180px;
+  }
+  .imagenContainer{
+    display:inline-block; 
+    margin:10px;
+  }
+  

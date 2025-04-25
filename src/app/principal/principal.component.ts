@@ -1,30 +1,16 @@
 import { Component } from '@angular/core';
-import { RouterModule } from '@angular/router';
-
-@Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [RouterModule],
-  template: `<router-outlet></router-outlet>`
-})
-export class AppComponent {}
-
-
-/*
-import { Component } from '@angular/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
-import { PokedexComponent } from './pokedex/pokedex.component';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 @Component({
-  selector: 'app-root',
+  selector: 'app-principal',
   standalone: true,
-  imports: [CommonModule, HttpClientModule, RouterModule],
-  templateUrl: './app.component.html'
+  imports: [CommonModule, RouterModule, HttpClientModule],
+  templateUrl: './principal.component.html',
+  styleUrls: ['./principal.component.css']
 })
-export class AppComponent {
-  title = 'nombre-del-proyecto';
+export class PrincipalComponent {
   pokemons: any[] = [];
 
   constructor(private http: HttpClient) {}
@@ -43,4 +29,3 @@ export class AppComponent {
       });
   }
 }
-*/
