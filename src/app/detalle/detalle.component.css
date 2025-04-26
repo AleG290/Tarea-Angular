@@ -1,0 +1,88 @@
+
+body {
+    font-family: sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    background-color: #dce2e7;
+  }
+  
+  #sprite {
+    width: 300px;
+    height: 300px;
+  }
+  
+  .card-detalle {
+    width: 250px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* <--- esto faltaba */
+    text-align: center;
+  }
+  
+  .card h3 {
+    margin-top: 0;
+    color: #333;
+  }
+  
+  .card p {
+    margin: 5px 0;
+  }
+  
+  .container {
+    display: flex;
+    flex-direction: row;
+    align-items: right;
+    flex-wrap: wrap;
+    gap: 5px;
+  }
+  .contenedor-imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .imagen{
+    width: 200px;
+    height: 180px;
+    margin-bottom: 10px; /* separa imagen y nombre */
+  }
+
+  .card-detalle:hover {
+    transform: translateY(-10px);
+  }
+  .nombre-pokemon {
+    margin: 0;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20px;
+    color: #333;
+  }
+
+  .card-poke {
+    width: 250px;
+    margin: 40px auto;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: #d9d9d9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* <--- esto faltaba */
+    text-align: center;
+  }
+
+  .card-container {
+    display: flex;
+    justify-content: center; /* centra las cartas horizontalmente */
+    gap: 1rem; /* espacio entre las cartas */
+    flex-wrap: wrap; /* permite que se acomoden si no caben */
+  }
+  
+  
