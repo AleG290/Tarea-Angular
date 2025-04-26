@@ -1,4 +1,4 @@
-# Tarea 3
+# Tarea-Angular
 
 Este proyecto es una aplicación en Angular que consume datos de la API pública de Pokémon y los muestra en una lista.
 
@@ -13,6 +13,7 @@ Este proyecto es una aplicación en Angular que consume datos de la API pública
 - Muestra una lista de los primeros 10 Pokémon desde la [Pokémon API](https://pokeapi.co/).
 - El diseño está basado en un tema inspirado en Pokémon, con tarjetas interactivas que muestran el nombre de cada Pokémon.
 - El título incluye el logo de Pokémon.
+- Cuenta con dos pantallas que muestra informacion adicional de cada pokemon
 
 ## **Requisitos**
 
@@ -24,13 +25,13 @@ Este proyecto es una aplicación en Angular que consume datos de la API pública
 1. **Clona el repositorio** en tu máquina local:
 
     ```bash
-    git clone https://github.com/tu-usuario/tarea3.git
+    git clone https://github.com/AleG290/Tarea-Angular
     ```
 
 2. **Accede a la carpeta del proyecto**:
 
     ```bash
-    cd tarea3
+    cd Tarea-Angular
     ```
 
 3. **Instala las dependencias** del proyecto:
@@ -55,7 +56,6 @@ Este proyecto es una aplicación en Angular que consume datos de la API pública
 
 - **app.component.ts**: Este archivo contiene la lógica para hacer la petición HTTP a la Pokémon API y mostrar los resultados en la vista.
 - **app.component.html**: Es el archivo donde se define el HTML que presenta la lista de Pokémon y el título con el logo.
-- **app.module.ts**: Este archivo es donde se declaran los módulos y servicios que Angular necesita para ejecutar la aplicación. Asegúrate de tener importados los módulos necesarios, como `HttpClientModule` para las peticiones HTTP.
 - **styles.css**: Estilos globales que se aplican a toda la aplicación.
 
 ## **Dependencias**
@@ -66,7 +66,3 @@ El proyecto utiliza las siguientes dependencias de Angular:
 - `@angular/common`
 - `@angular/http`
 - `rxjs`
-
-## **Licencia**
-
-Este proyecto está bajo la licencia MIT. Si necesitas más información sobre la licencia, consulta el archivo LICENSE.
