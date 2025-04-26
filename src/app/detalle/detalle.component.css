@@ -85,4 +85,8 @@ body {
     flex-wrap: wrap; /* permite que se acomoden si no caben */
   }
   
-  
+  .btn-navegar{
+    background-color: #ffffff ;
+    font-family: 'Arial Black', sans-serif;
+    font-size: 20px;
+  }

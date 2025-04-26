@@ -1,10 +1,9 @@
 <header class="app-header">
     <img src="assets/logo.png" alt="Logo Pokemon" class="logo" />
     
-    <button routerLink="/ruta-destino" class="btn-navegar">
-      next
+    <button [routerLink]="['/pokedex', id]" class="btn-navegar">
+      Ver mas datos
     </button>
-    
 </header>
 
 <div class="card-detalle" *ngIf="detallesPokemon.imagen">
@@ -39,9 +38,4 @@
           </ul>
 
         </div>
-        
-       
-        
-    
-      
 </div>

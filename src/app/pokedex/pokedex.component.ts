@@ -29,7 +29,7 @@ export class PokedexComponent {
   obtenerDetallesPokemon(id: string) {
     this.http.get(`https://pokeapi.co/api/v2/pokemon/${id}`).subscribe((respuesta: any) => {
       this.detallesPokemon = {
-        nombre: respuesta.imagen,
+        nombre: respuesta.name,
         imagen: `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${respuesta.id}.png`,
         estadisticas: respuesta.stats.map((stat: any) => ({
           nombreEstadistica: stat.stat.name,
