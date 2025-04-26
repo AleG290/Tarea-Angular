@@ -1,0 +1,14 @@
+<header class="app-header">
+    <img src="assets/logo.png" alt="Logo Pokemon" class="logo" />
+    <h1>Lista de Pokémon</h1>
+  </header>
+  
+  <ul>
+    <li *ngFor="let poke of pokemons">
+      <a [routerLink]="['/detalle', poke.id]">
+        <img [src]="poke.image" [alt]="poke.name" class="pokemon-img" />
+        {{ poke.name | titlecase }}
+      </a>
+    </li>
+  </ul>
+  

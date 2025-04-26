@@ -1,0 +1,41 @@
+<header class="app-header">
+    <img src="assets/logo.png" alt="Logo Pokemon" class="logo" />
+    
+    <button [routerLink]="['/pokedex', id]" class="btn-navegar">
+      Ver mas datos
+    </button>
+</header>
+
+<div class="card-detalle" *ngIf="detallesPokemon.imagen">
+    <h2 class="nombre-pokemon">{{ detallesPokemon.nombre | titlecase }}</h2>
+
+    <div class="contenedor-imagen"> 
+      <img [src]="detallesPokemon.imagen" alt="{{detallesPokemon.nombre}}" class="imagen">
+    </div> 
+</div>
+
+<div class="card-container">
+
+  <div class="card-poke">  
+    <h3>Descripción:</h3>
+    <ul>
+      <li class="info-pokemon">Peso:{{ detallesPokemon.peso }}   kg </li>
+      <li class="info-pokemon">Altura: {{ detallesPokemon.altura }} m</li>
+    </ul>
+  </div>
+
+        <div class="card-poke">
+          <h3>Habilidades:</h3>
+          <ul>
+            <li *ngFor="let habilidad of detallesPokemon.habilidades">  {{ habilidad}}</li>
+          </ul>
+        </div>
+
+        <div class="card-poke">
+          <h3>Tipos:</h3>
+          <ul>
+            <li *ngFor="let tipo of detallesPokemon.tipos">{{ tipo }}</li>
+          </ul>
+
+        </div>
+</div>

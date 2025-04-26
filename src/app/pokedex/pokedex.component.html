@@ -1,0 +1,44 @@
+<header class="app-header">
+    <img src="assets/logo.png" alt="Logo Pokemon" class="logo" />
+   
+</header>
+  
+  <div *ngIf="detallesPokemon.nombre">
+  
+    <!-- Imagen principal -->
+    <div class="bloque-info">
+      <h2>{{ detallesPokemon.nombre | titlecase }}</h2>
+      <img [src]="detallesPokemon.imagen" alt="{{ detallesPokemon.nombre }}" class="imagen" />
+    </div>
+  
+    <!-- Estadísticas -->
+    <div class="bloque-info">
+      <h3>Estadísticas base</h3>
+      <ul>
+        <li *ngFor="let estadistica of detallesPokemon.estadisticas">
+          {{ estadistica.nombreEstadistica | titlecase }}: {{ estadistica.valorBase }}
+        </li>
+      </ul>
+    </div>
+  
+    <!-- Juegos donde aparece -->
+    <div class="bloque-info">
+      <h3>Juegos donde aparece</h3>
+      <ul>
+        <li *ngFor="let juego of detallesPokemon.juegos">{{ juego | titlecase }}</li>
+      </ul>
+    </div>
+  
+    <!-- Evoluciones -->
+    <div class="bloque-info">
+      <h3>Evoluciones del pokemon</h3>
+      <div *ngIf="pokemonesRelacionados.length > 0">
+        <div *ngFor="let poke of pokemonesRelacionados" class="imagenContainer">
+          <img [src]="poke.imagen" alt="{{ poke.nombre }}" class="imagen" />
+          <p>{{ poke.nombre | titlecase }}</p>
+        </div>
+      </div>
+    </div>
+  
+  </div>
+  
