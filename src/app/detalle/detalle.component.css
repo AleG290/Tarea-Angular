@@ -16,12 +16,12 @@ body {
     margin: 40px auto;
     padding: 20px;
     border-radius: 15px;
-    background-color: #d9d9d9;
+    background-color: rgba(250,250,250,0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; /* <--- esto faltaba */
+    justify-content: center; 
     text-align: center;
   }
   
@@ -69,11 +69,11 @@ body {
     margin: 40px auto;
     padding: 20px;
     border-radius: 15px;
-    background-color: #d9d9d9;
+    background-color: rgba(250,250,250,0.7);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: center;;
     justify-content: center; /* <--- esto faltaba */
     text-align: center;
   }
